@@ -28,6 +28,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import { EncryptionSettings } from "@/components/EncryptionSettings";
+import { SyncButton } from "@/components/SupabaseSync";
 import { useState } from "react";
 
 interface DashboardProps {
@@ -165,6 +166,7 @@ export function Dashboard({ onNavigate }: DashboardProps) {
           </div>
           <div className="flex gap-2">
             <LanguageSelector />
+            <SyncButton />
             <Button
               variant="ghost"
               size="icon"

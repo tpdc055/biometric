@@ -21,6 +21,7 @@ import { BackupRestore } from "@/components/BackupRestore";
 import { CSVImport } from "@/components/CSVImport";
 import { CloudSync } from "@/components/CloudSync";
 import { MapView } from "@/components/MapView";
+import { SupabaseSync } from "@/components/SupabaseSync";
 import { format } from "date-fns";
 import { useLiveQuery } from "dexie-react-hooks";
 import {
@@ -55,6 +56,7 @@ export function ExportScreen({ onBack }: ExportScreenProps) {
   const [showImport, setShowImport] = useState(false);
   const [showCloudSync, setShowCloudSync] = useState(false);
   const [showMap, setShowMap] = useState(false);
+  const [showSupabaseSync, setShowSupabaseSync] = useState(false);
 
   // Data queries
   const wards = useLiveQuery(() => db.wards.toArray());
@@ -487,6 +489,29 @@ export function ExportScreen({ onBack }: ExportScreenProps) {
           </CardContent>
         </Card>
 
+        {/* Supabase Cloud Backup */}
+        <Card className="border-purple-200 bg-purple-50/50">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-base flex items-center gap-2">
+              <Cloud className="w-5 h-5 text-purple-600" />
+              Supabase Cloud Backup
+            </CardTitle>
+            <CardDescription>
+              Professional cloud backup with Supabase database
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button
+              variant="outline"
+              className="w-full border-purple-300 text-purple-700 hover:bg-purple-100"
+              onClick={() => setShowSupabaseSync(true)}
+            >
+              <Cloud className="w-4 h-4 mr-2" />
+              Open Supabase Sync
+            </Button>
+          </CardContent>
+        </Card>
+
         {/* Map View */}
         <Card className="border-teal-200 bg-teal-50/50">
           <CardHeader className="pb-3">
@@ -589,6 +614,12 @@ export function ExportScreen({ onBack }: ExportScreenProps) {
       <MapView
         open={showMap}
         onClose={() => setShowMap(false)}
+      />
+
+      {/* Supabase Sync Dialog */}
+      <SupabaseSync
+        open={showSupabaseSync}
+        onClose={() => setShowSupabaseSync(false)}
       />
     </div>
   );

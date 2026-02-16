@@ -1,8 +1,14 @@
 # Citizen Registry PWA - Development Todos
 
 ## In Progress
+- [ ] Manual testing of complete sync workflow
+- [ ] Verifying photo/fingerprint uploads work correctly
 
 ## Completed
+- [x] **Photo & Fingerprint Upload to Supabase Storage** - Media files now uploaded to cloud
+- [x] **Cloud-to-Local Restore Function** - Download and merge data from Supabase
+- [x] **Enhanced Sync UI** - Separate Upload and Download buttons with progress tracking
+- [x] **Media Download during Restore** - Photos and fingerprints automatically downloaded
 - [x] **Madang Provincial Government Branding** - Add MPG logo throughout the application
 - [x] **MPG Color Scheme** - Apply gold (#D4AF37) and black theme from logo throughout the app
 - [x] **Custom Splash Screen** - Create MPG-branded splash screen for PWA launch
@@ -33,6 +39,7 @@
 - [x] **Data Encryption** - Web Crypto API encryption for sensitive data at rest
 - [x] **Analytics Dashboard** - Advanced reporting with interactive charts and statistics
 - [x] **Digital Signature** - Canvas-based signature capture for consent forms
+- [x] **Supabase Cloud Sync Integration** - Professional cloud backup to Supabase database with Progress UI
 
 ## Phase 1 Extensions (Future)
 - [ ] Swahili language support (i18n)
