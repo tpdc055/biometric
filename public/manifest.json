@@ -1,0 +1,31 @@
+{
+  "name": "Madang Provincial Government - Citizen Registry",
+  "short_name": "MPG Citizen Registry",
+  "description": "Offline-first citizen registration system for Madang Provincial Government, Papua New Guinea",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/mpg-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/mpg-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["government", "productivity", "utilities"],
+  "lang": "en-PG",
+  "dir": "ltr",
+  "scope": "/",
+  "serviceworker": {
+    "src": "/sw.js"
+  }
+}
